@@ -1,0 +1,112 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{重ね合わせの理・テブナンの定理の諸式}
+\author{Kyuri-dao}
+\date{June 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{はじめに}
+これはWordで数式を張り付けるのがめんどくせぇ人に向けたテキストです．\\
+LaTeXで書かれているので，コードそのものが欲しい人は僕のリポジトリまで来てください．
+
+\section{重ね合わせの理}
+
+\begin{center}
+    電流$I_1'$，$I_2'$，$I_3'$の式.
+\end{center}
+
+
+
+\begin{equation}
+    I_1' = \frac{(R_1 + R_2)E_1}{R_1R_2+R_2R_3+R_3R_1}
+\end{equation}
+
+\begin{equation}
+    I_2' = \frac{R_3E_1}{R_1R_2+R_2R_3+R_3R_1}
+\end{equation}
+
+\begin{equation}
+    I_3' = \frac{R_2E_1}{R_1R_2+R_2R_3+R_3R_1}
+\end{equation}
+
+\begin{center}
+    電流$I_1''$，$I_2''$，$I_3''$の式．    
+\end{center}
+
+
+\begin{equation}
+    I_2'' = \frac{(R_1+R_3)E_2}{R_1R_2+R_2R_3+R_3R_1}    
+\end{equation}
+
+\begin{equation}
+    I_3'' = \frac{R_3E_2}{R_1R_2+R_2R_3+R_3R_1}
+\end{equation}
+
+\begin{equation}
+    I_1'' = \frac{R_1E_2}{R_1R_2+R_2R_3+R_3R_1}
+\end{equation}
+
+\begin{center}
+    代数和の式
+\end{center}
+
+\begin{equation}
+    I_1 = I_1' + (-I_1'')  \quad I_2 = (-I_2') + I_2'' \quad I_3 = I_3' + I_3''
+\end{equation}
+
+\section{テブナンの定理}
+
+\begin{center}
+    \subsection{$I_1$を求める}
+\end{center}
+
+\begin{equation}
+    V_0 = \frac{R_3}{R_2+R_3}E_2
+\end{equation}
+
+\begin{equation}
+    R_0 = \frac{R_2R_3}{R_2+R_3} 
+\end{equation}
+
+\begin{equation}
+    I_1 = \frac{E_1-V_0}{R_1+R_0}
+\end{equation}
+
+\begin{center}
+    \subsection{$I_2$を求める}
+\end{center}
+
+\begin{equation}
+    V_0 = \frac{R_3}{R_1+R_3}E_1
+\end{equation}
+
+\begin{equation}
+    R_0 = \frac{R_1R_3}{R_1+R_3}
+\end{equation}
+
+\begin{equation}
+    I_2 = \frac{E_2-V_0}{R_2+R_0}
+\end{equation}
+
+\begin{center}
+    \subsection{$I_3$を求める}
+\end{center}
+
+\begin{equation}
+    V_0 = E_2 - R_2I_3' = \frac{R_1E_2+R_2E_1}{R_1+R_2}
+\end{equation}
+
+\begin{equation}
+    R_0 = \frac{R_1R_2}{R_1+R_2}
+\end{equation}
+
+\begin{equation}
+    I_3 = \frac{R_0}{R_3+R_0}
+\end{equation}
+
+
+\end{document}
